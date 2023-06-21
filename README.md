@@ -17,3 +17,12 @@
 
 Notice -- that the springboot app is failing to start.  `docker compose logs springboot` shows it's that the password is wrong in `application.properties`
 
+
+### Problems
+
+Currently getting:
+```
+dceg-springboot-1  | org.postgresql.util.PSQLException: Connection to postgres:5432 refused. Check that the hostname and port are correct and that the postmaster i
+s accepting TCP/IP connections.
+```
+
