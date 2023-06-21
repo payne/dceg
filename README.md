@@ -37,3 +37,16 @@ logout
 root@30a0301acfd2:/# exit
 exit
 ```
+
+## Most ports exposed -- that's bad -- and handy
+
+### Angular
+Since nginx is serving on port 80, http://localhost shows this:
+![angular app](img/angular1.png)
+
+### Spring boot swagger 
+Since 8080 is exposed outside the docker compose network, http://localhost:8080/swagger-ui/index.html shows this:
+![swagger from spring boot](img/swagger1.png)
+
+
+
