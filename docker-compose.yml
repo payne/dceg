@@ -1,0 +1,49 @@
+version: '3.8'
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - angular
+    networks:
+      - my-network
+
+  angular:
+    build:
+      context: ./angular-app
+    ports:
+      - 4200:4200
+    networks:
+      - my-network
+
+  springboot:
+    build:
+      context: ./spring-boot-app
+    ports:
+      - 8080:8080
+    depends_on:
+      - postgres
+    networks:
+      - my-network
+
+  postgres:
+    image: postgres:latest
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=your_username
+      - POSTGRES_PASSWORD=your_password
+      - POSTGRES_DB=your_database
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+    networks:
+      - my-network
+
+networks:
+  my-network:
+
+
