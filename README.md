@@ -29,6 +29,7 @@ Type "help" for help.
 springbootdb=# select * from todo;
  id | completed | date_created | item | last_updated
 ----+-----------+--------------+------+--------------
+ 10000 | f         | 2023-06-21 02:33:24.063316+00 | sleep | 2023-06-21 02:33:24.063316+00
 (0 rows)
 
 springbootdb=# exit
