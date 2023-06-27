@@ -1,5 +1,14 @@
 # dceg: Example of using a docker-compose.yml 
 
+## Dream of many example paths
+```mermaid
+graph LR
+   Angular -- Spring/API --> PostgreSQL
+   Browser -- Spring/Thymeleaf --> PostgreSQL
+   Vue -- Spring/API --> PostgreSQL
+   React -- Spring/API --> PostgreSQL
+```
+
 ## Usage
 ```
 ❯ docker compose up -d # you should see four containers start
